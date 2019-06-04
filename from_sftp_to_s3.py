@@ -17,7 +17,7 @@ args = {
 dag = DAG(
     dag_id='from_sftp_to_s3',
     default_args=args,
-    schedule_interval='*/1 * * * *')
+    schedule_interval='0 */1 * * *')
 
 vgs_api = Variable.get("vgs_api")
 vgs_user = Variable.get("vgs_user")
