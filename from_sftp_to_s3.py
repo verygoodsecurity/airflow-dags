@@ -15,7 +15,7 @@ args = {
 }
 
 dag = DAG(
-    dag_id='newest_s3',
+    dag_id='from_sftp_to_s3',
     default_args=args,
     schedule_interval='*/1 * * * *')
 
