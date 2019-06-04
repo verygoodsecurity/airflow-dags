@@ -33,7 +33,7 @@ sftp_server_pass = sm.decrypt("tok_dev_qHUDREV3TvS691g1eUHwE3")
 
 
 task = BashOperator(
-    task_id='newest_s3',
+    task_id='from_sftp_to_s3',
     bash_command=script_to_run,
     params={"sftp_server_pass": sftp_server_pass,"aws_access_key_id": aws_access_key_id, "aws_secret_access_key": aws_secret_access_key},
     dag=dag)
