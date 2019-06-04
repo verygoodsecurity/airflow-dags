@@ -19,7 +19,10 @@ dag = DAG(
     default_args=args,
     schedule_interval='*/1 * * * *')
 
-sm = SecretManager()
+vgs_api = Variable.get("vgs_api")
+vgs_user = Variable.get("vgs_user")
+vgs_password = Variable.get("vgs_password")
+sm = SecretManager(username=vgs_user, password=vgs_password, api_host=vgs_api)
 
 aws_access_key_id=sm.decrypt("tok_dev_2AXxzhyPZh1Rm6KCYQPCrG")
 aws_secret_access_key=sm.decrypt("tok_dev_eXYD1EQfoc56Nk5NoabgXR")
