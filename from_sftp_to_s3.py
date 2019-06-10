@@ -24,8 +24,8 @@ vgs_user = Variable.get("vgs_user")
 vgs_password = Variable.get("vgs_password")
 sm = SecretManager(username=vgs_user, password=vgs_password, api_host=vgs_api)
 
-aws_access_key_id=sm.decrypt("tok_dev_2AXxzhyPZh1Rm6KCYQPCrG")
-aws_secret_access_key=sm.decrypt("tok_dev_eXYD1EQfoc56Nk5NoabgXR")
+aws_access_key_id=sm.decrypt("tok_dev_vu4xnPXVB8ybiATrXB1d1P")
+aws_secret_access_key=sm.decrypt("tok_dev_h5wV5NUWymCKHWR81fESZS")
 sftp_server_pass=sm.decrypt("tok_dev_qHUDREV3TvS691g1eUHwE3")
 
 #test_key = os.environ['AIRFLOW_USER_PASS']
